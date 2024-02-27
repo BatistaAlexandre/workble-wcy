@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc;
+            color: #485766;
+            margin: 0;
+            padding: 0;
+        }
+
+        #whr_embed_hook {
+            max-width: 1150px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Adicionando uma sombra mais pronunciada */
+            overflow: hidden;
+        }
+
+        .whr-item {
+            padding: 16px;
+            border-bottom: 2px solid #cdd1d4;
+            overflow: hidden;
+            display: flex;
+            transition: all 0.3s ease; /* Adicionando transição suave */
+        }
+
+        .whr-item:hover {
+            transform: translateY(-4px); /* Elevando um pouco o card ao passar o mouse */
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Aumentando a sombra ao passar o mouse */
+        }
+
+        .whr-title {
+            font-size: 1.2rem;
+            color: #3b4a5a;
+            margin-bottom: 10px;
+            width: 400px;
+        }
+
+        .whr-description {
+            color: #6b7c93;
+            line-height: 1.6;
+            float: right;
+            width: calc(100% - 200px);
+            /* Ajuste para deixar espaço para a descrição */
+            margin-left: 20px;
+            /* Espaçamento entre o título e a descrição */
+        }
+
+        .whr-info {
+            margin-top: 23px;
+            list-style: none;
+            padding: 0;
+            margin-left: 30px;
+        }
+
+        .whr-info li {
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 0.9rem;
+            color: #687079;
+        }
+
+        .whr-info li span {
+            color: #444b55;
+            font-weight: bold;
+        }
+
+        .whr-toggle {
+            background-color: #f7f9fc;
+            padding: 10px;
+            text-align: center;
+            border-top: 1px solid #e0e6ed;
+        }
+
+        .whr-toggle:hover {
+            background-color: #edf1f5;
+            cursor: pointer;
+        }
+
+        a {
+            color: #1245ba;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="whr_embed_hook">
+        <!-- Aqui está o conteúdo do widget incorporado -->
+        <script src='https://www.workable.com/assets/embed.js' type='text/javascript'></script>
+        <script type='text/javascript' charset='utf-8'>
+            whr(document).ready(function () {
+                whr_embed(635649, { detail: 'titles', base: 'jobs', zoom: 'country', grouping: 'none' });
+            });
+        </script>
+    </div>
+</body>
+</html>
