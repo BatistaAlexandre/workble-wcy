@@ -1,68 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f7f9fc;
+            background-color: #f7f9fc00;
             color: #485766;
             margin: 0;
             padding: 0;
-            
         }
 
         #whr_embed_hook {
-            max-width: 800px;
+            max-width: 63.5%;
             margin: 20px auto;
-            background-color: #fff;
+            background-color: #ffffff00;
             border-radius: 8px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Adicionando uma sombra mais pronunciada */
+            box-shadow: rgb(0, 0, 0) 0px 1px 4px, rgb(0, 0, 0) 0px 0px 0px 4px;            /* Adicionando uma sombra mais pronunciada */
             overflow: hidden;
+        }
+
+        .whr-items {
+            max-width: 100%;
         }
 
         .whr-item {
+            max-width: 100%;
             padding: 16px;
             border-bottom: 2px solid #cdd1d4;
             overflow: hidden;
-            display: flex;
-            transition: all 0.3s ease; /* Adicionando transição suave */
+            transition: all 0.3s ease;
+            /* Adicionando transição suave */
         }
 
         .whr-item:hover {
-            transform: translateY(-4px); /* Elevando um pouco o card ao passar o mouse */
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Aumentando a sombra ao passar o mouse */
+            transform: translateY(-4px);
+            /* Elevando um pouco o card ao passar o mouse */
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            /* Aumentando a sombra ao passar o mouse */
+        }
+
+        li.whr-item {
+            display: inline-block;
+            width: 100%;
+            vertical-align: top;
         }
 
         .whr-title {
             font-size: 1.2rem;
             color: #3b4a5a;
             margin-bottom: 10px;
-            width: 900px;
         }
 
         .whr-description {
             color: #6b7c93;
             line-height: 1.6;
-            float: right;
-            width: calc(100% - 200px);
-            /* Ajuste para deixar espaço para a descrição */
-            margin-left: 20px;
-            /* Espaçamento entre o título e a descrição */
         }
 
         .whr-info {
-            margin-top: 23px;
-            list-style: none;
-            padding: 0;
-            margin-left: 30px;
+            margin-top: 10px;
+            /* Ajustado espaçamento para melhor visualização */
+            list-style-type: disc;
+            /* Mantém a formatação de lista */
+            list-style-position: inside;
+            /* Coloca o marcador dentro do elemento */
+            padding-left: 20px;
+            /* Espaçamento à esquerda para os marcadores */
+            /* Adicionado para dividir em duas colunas */
+            column-count: 2;
+            column-gap: 20px;
+            /* Espaço entre as colunas */
             display: none;
         }
 
+        ul {
+            max-width: 100%;
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 0px;
+        }
+
         .whr-info li {
-            display: inline-block;
-            margin-right: 10px;
+            /* Alterado display para block para forçar um item por linha */
+            display: block;
+            margin-bottom: 5px;
+            /* Espaçamento entre os itens */
             font-size: 0.9rem;
             color: #687079;
         }
@@ -84,6 +112,10 @@
             cursor: pointer;
         }
 
+        h3 {
+            color: #1245ba;
+        }
+
         a {
             color: #1245ba;
             text-decoration: none;
@@ -94,6 +126,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <div id="whr_embed_hook">
@@ -106,4 +139,5 @@
         </script>
     </div>
 </body>
+
 </html>
