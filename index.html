@@ -142,6 +142,14 @@
             whr(document).ready(function () {
                 whr_embed(635649, { detail: 'titles', base: 'jobs', zoom: 'country', grouping: 'none' });
             });
+
+            // Adicionando função para abrir em nova aba
+            document.getElementById('whr_embed_hook').addEventListener('click', function (event) {
+                var target = event.target;
+                if (target.tagName === 'A') {
+                    target.setAttribute('target', '_blank');
+                }
+            });
         </script>
     </div>
 </body>
